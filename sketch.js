@@ -174,7 +174,7 @@ leftMenu.innerHTML = `
         <ul>
             <li id="menu-item-works">第一單元作品</li>
             <li id="menu-item-notes">第一單元講義</li>
-            <li id="menu-item-quiz">測驗系統</li>
+            <li id="menu-item-quiz">第二單元測驗系統</li>
             <li id="menu-item-home">回到首頁</li>
         </ul>
     </nav>
@@ -288,3 +288,4 @@ closeBtn && closeBtn.addEventListener('click', () => {
 document.getElementById('menu-item-home').addEventListener('click', () => {
     window.location.href = '/';
 });
+```// filepath: c:\Users\mina1\OneDrive\Desktop\20251114\sketch.js
