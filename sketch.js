@@ -288,4 +288,3 @@ closeBtn && closeBtn.addEventListener('click', () => {
 document.getElementById('menu-item-home').addEventListener('click', () => {
     window.location.href = '/';
 });
-```// filepath: c:\Users\mina1\OneDrive\Desktop\20251114\sketch.js
