@@ -174,7 +174,7 @@ leftMenu.innerHTML = `
         <ul>
             <li id="menu-item-works">第一單元作品</li>
             <li id="menu-item-notes">第一單元講義</li>
-            <li id="menu-item-quiz">測驗系統</li>
+            <li id="menu-item-quiz">第二單元測驗系統</li>
             <li id="menu-item-home">回到首頁</li>
         </ul>
     </nav>
@@ -255,10 +255,10 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-// 點擊處理：第一單元作品、講義、測驗系統 => 顯示 iframe（70% 寬，85% 高）
+// 點擊處理：第一單元作品、講義、第二單元測驗系統 => 顯示 iframe（70% 寬，85% 高）
 const worksBtn = document.getElementById('menu-item-works');
 const notesBtn = document.getElementById('menu-item-notes');
-const quizBtn = document.getElementById('menu-item-quiz');
+const quizBtn = document.getElementById('menu-item-works');
 const iframeOverlay = document.getElementById('iframeOverlay');
 const contentIframe = document.getElementById('contentIframe');
 const closeBtn = document.getElementById('closeIframe');
@@ -273,7 +273,7 @@ notesBtn && notesBtn.addEventListener('click', () => {
   iframeOverlay.classList.add('visible');
 });
 
-quizBtn && quizBtn.addEventListener('click', () => {
+worksBtn && worksBtn.addEventListener('click', () => {
   contentIframe.src = 'https://mina1150278-debug.github.io/20251110-quiz/';
   iframeOverlay.classList.add('visible');
 });
