@@ -271,17 +271,6 @@ notesBtn.addEventListener('click', () => {
     contentIframe.src = 'https://hackmd.io/@YPlb5MOlSYySCINSKemhhA/HJ5cPQRoxx';
     iframeOverlay.classList.add('visible');
 });
-// 點擊處理：測驗系統=> 顯示 iframe（70% 寬，85% 高）
-const worksBtn = document.getElementById('menu-item-works');
-const notesBtn = document.getElementById('menu-item-notes'); // 新增：取得講義按鈕
-const iframeOverlay = document.getElementById('iframeOverlay');
-const contentIframe = document.getElementById('contentIframe');
-const closeBtn = document.getElementById('closeIframe');
-
-worksBtn.addEventListener('click', () => {
-    contentIframe.src = 'https://mina1150278-debug.github.io/20251110-quiz/';
-    iframeOverlay.classList.add('visible');
-});
 
 // 關閉按鈕
 closeBtn.addEventListener('click', () => {
