@@ -1,3 +1,4 @@
+// ...existing code...
 let objs = [];
 let colors = ['#f71735', '#f7d002', '#1A53C0', '#232323'];
 
@@ -254,32 +255,37 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-// 點擊處理：第一單元作品 => 顯示 iframe（70% 寬，85% 高）
+// 點擊處理：第一單元作品、講義、測驗系統 => 顯示 iframe（70% 寬，85% 高）
 const worksBtn = document.getElementById('menu-item-works');
-const notesBtn = document.getElementById('menu-item-notes'); // 新增：取得講義按鈕
+const notesBtn = document.getElementById('menu-item-notes');
+const quizBtn = document.getElementById('menu-item-quiz');
 const iframeOverlay = document.getElementById('iframeOverlay');
 const contentIframe = document.getElementById('contentIframe');
 const closeBtn = document.getElementById('closeIframe');
 
-worksBtn.addEventListener('click', () => {
-    contentIframe.src = 'https://mina1150278-debug.github.io/20251101-1/';
-    iframeOverlay.classList.add('visible');
+worksBtn && worksBtn.addEventListener('click', () => {
+  contentIframe.src = 'https://mina1150278-debug.github.io/20251101-1/';
+  iframeOverlay.classList.add('visible');
 });
 
-// 新增：點擊處理：第一單元講義 => 顯示指定 HackMD 網頁（70% 寬，85% 高）
-notesBtn.addEventListener('click', () => {
-    contentIframe.src = 'https://hackmd.io/@YPlb5MOlSYySCINSKemhhA/HJ5cPQRoxx';
-    iframeOverlay.classList.add('visible');
+notesBtn && notesBtn.addEventListener('click', () => {
+  contentIframe.src = 'https://hackmd.io/@YPlb5MOlSYySCINSKemhhA/HJ5cPQRoxx';
+  iframeOverlay.classList.add('visible');
 });
 
-// 關閉按鈕
-closeBtn.addEventListener('click', () => {
-    iframeOverlay.classList.remove('visible');
-    // 延遲清空 src，避免背景持續載入
-    setTimeout(() => { contentIframe.src = 'about:blank'; }, 300);
+quizBtn && quizBtn.addEventListener('click', () => {
+  contentIframe.src = 'https://mina1150278-debug.github.io/20251110-quiz/';
+  iframeOverlay.classList.add('visible');
+});
+
+closeBtn && closeBtn.addEventListener('click', () => {
+  iframeOverlay.classList.remove('visible');
+  // 延遲清空 src，避免背景持續載入
+  setTimeout(() => { contentIframe.src = 'about:blank'; }, 300);
 });
 
 // 可按需要為其他選單加入導向
 document.getElementById('menu-item-home').addEventListener('click', () => {
     window.location.href = '/';
 });
+```// filepath: c:\Users\mina1\OneDrive\Desktop\20251114\sketch.js
