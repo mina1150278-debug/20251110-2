@@ -272,6 +272,12 @@ notesBtn.addEventListener('click', () => {
     iframeOverlay.classList.add('visible');
 });
 
+// 新增：點擊處理：測驗系統 => 顯示指定 iframe 網頁（70% 寬，85% 高）
+notesBtn.addEventListener('click', () => {
+    contentIframe.src = 'https://mina1150278-debug.github.io/20251110-quiz/';
+    iframeOverlay.classList.add('visible');
+});
+
 // 關閉按鈕
 closeBtn.addEventListener('click', () => {
     iframeOverlay.classList.remove('visible');
